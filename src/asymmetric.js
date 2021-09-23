@@ -4,12 +4,12 @@ const crypto = require('crypto');
 const path   = require('path');
 
 // secret para gerar a chave privada
-const passphrase      = 'mySecret';
+const passphrase = 'mySecret';
 
 const privateKeyPath  = './src/keys/asymmetric_private.pem';
 const publicKeyPath   = './src/keys/asymmetric_public.pem';
 
-// Função responsavel por criptografrar a mensagem com base na chave publica
+// Função responsavel por criptografar a mensagem com base na chave publica
 const encryptStringWithRsaPublicKey = (toEncrypt, relativeOrAbsolutePathToPublicKey) => {
   var absolutePath = path.resolve(relativeOrAbsolutePathToPublicKey);
   var publicKey = fs.readFileSync(absolutePath, 'utf8');
