@@ -4,7 +4,8 @@
   "description": "A sample usage of cryptography asymmetric and symmetric",
   "main": "cryptography-sistemas-distribuidos.js",
   "scripts": {
-    "run": "node src/index.js"
+    "symmetric": "node src/symmetric.js",
+    "asymmetric": "node src/asymmetric.js"
   },
   "eslintIgnore": [
     ".eslintrc.js"

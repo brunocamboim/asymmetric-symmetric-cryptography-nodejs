@@ -57,11 +57,14 @@ const generateKeys = async () => {
   fs.writeFileSync(publicKeyPath, publicKey);
 };
 
+console.log('Generating private and public keys...');
 generateKeys();
 
 // Cliente a criptografa a mensagem com a chave publica
-const a = encryptStringWithRsaPublicKey('hello', publicKeyPath);
+const message = 'Write a message here';
+const a       = encryptStringWithRsaPublicKey(message, publicKeyPath);
+console.log(`Sending message (${message}) encrypted`, a);
 
 // Destinatario recebe a mensagem criptografada e desencriptografa a chave privada
 const b = decryptStringWithRsaPrivateKey(a, privateKeyPath);
-console.log(b);
+console.log('\nReceive message decrypted:', b);
