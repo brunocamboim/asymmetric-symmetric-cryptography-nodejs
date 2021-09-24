@@ -2,7 +2,6 @@
   "name": "cryptography-exercise",
   "version": "1.0.0",
   "description": "A sample usage of cryptography asymmetric and symmetric",
-  "main": "cryptography-sistemas-distribuidos.js",
   "scripts": {
     "symmetric": "node src/symmetric.js",
     "asymmetric": "node src/asymmetric.js"
